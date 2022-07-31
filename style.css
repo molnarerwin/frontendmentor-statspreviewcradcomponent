@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+}
+
+div.center {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+main.statscard {
+    min-height: 446px;
+    width: 1110px;
+    background-color: hsl(244, 38%, 16%);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+main.statscard div.flex {
+    display: flex;
+}
+
+main.statscard div.image-wrapper {
+    background-color: hsl(277, 64%, 61%);
+}
+
+main.statscard div.image-wrapper img {
+    height: 100%;
+    width: auto;
+    opacity: 0.6;
+    display: block;
+}
+
+main.statscard div.content {
+    padding: 70px 110px 70px 70px;
+}
+
+main.statscard div.content p.title {
+    font-size: 34px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+main.statscard div.content p.title span.accent {
+    color: hsl(277, 64%, 61%);
+}
+
+main.statscard div.content p.description {
+    margin: 30px 0 55px;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7em;
+}
+
+main.statscard div.content div.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+main.statscard div.content div.stats div.statdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+main.statscard div.content div.stats div.statdetails span:first-of-type {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 26px;
+}
+
+main.statscard div.content div.stats div.statdetails span:last-of-type {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 1440px) {
+    main.statscard {
+        width: 540px;
+        text-align: center;
+    }
+
+    main.statscard div.image-wrapper img {
+        height: auto;
+        width: 100%;
+    }
+
+    main.statscard div.content {
+        padding: 70px;
+    }
+
+    main.statscard div.flex {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    main.statscard div.content {
+        padding: 35px;
+    }
+
+    main.statscard div.content div.stats {
+        flex-direction: column;
+        gap: 35px;
+    }
+}
